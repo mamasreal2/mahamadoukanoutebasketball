@@ -1,66 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahamadou Kanouté | Recruiting Profile</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://i.ibb.co/RTBLGrgk/image.png');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: white;
-            text-align: center;
-        }
-        .container {
-            background-color: rgba(0, 0, 0, 0.85);
-            padding: 40px 20px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
-            max-width: 400px;
-            width: 90%;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        h1 { margin: 0; font-size: 2em; text-transform: uppercase; letter-spacing: 1px; }
-        .info { margin: 15px 0; font-size: 1.3em; font-weight: bold; color: #f0f0f0; }
-        .stats { font-size: 1em; color: #ccc; margin-bottom: 25px; line-height: 1.5; }
-        .button {
-            display: block;
-            margin: 12px auto;
-            padding: 15px;
-            border-radius: 10px;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            text-transform: uppercase;
-            transition: 0.3s;
-            font-size: 0.9em;
-        }
-        .btn-youtube { background-color: #FF0000; }
-        .btn-insta { background-color: #E1306C; }
-        .btn-whatsapp { background-color: #25D366; }
-        .button:hover { transform: scale(1.03); }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Mahamadou Kanouté</h1>
-        <div class="info">6'9 PF/C | Class of 2026</div>
-        <div class="stats">240 lbs | 7'1 Wingspan<br>Elite Prospect | 🎓 Graduate</div>
+import React from 'react';
+
+const Portfolio = () => {
+  return (
+    <div style={{ backgroundColor: '#111', color: '#fff', minHeight: '100vh', padding: '40px 20px', fontFamily: 'Arial, sans-serif' }}>
+      
+      {/* HEADER : Identité & Physique */}
+      <header style={{ textAlign: 'center', marginBottom: '50px' }}>
+        <h1 style={{ fontSize: '3rem', fontWeight: 'bold', color: '#e63946' }}>MAHAMADOU KANOUTE</h1>
+        <p style={{ fontSize: '1.5rem', color: '#ccc' }}>Class of 2026 | PF / C | 6'9 (206cm)</p>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '25px', marginTop: '20px', fontSize: '1.1rem' }}>
+          <span><strong>Weight:</strong> 240 lbs (109kg)</span>
+          <span><strong>Wingspan:</strong> 7'1</span>
+          <span><strong>Location:</strong> Caen, France</span>
+        </div>
+      </header>
+
+      {/* SECTION VIDEO : Ton Short YouTube / Highlights */}
+      <section style={{ maxWidth: '900px', margin: '0 auto', marginBottom: '60px' }}>
+        <h2 style={{ borderBottom: '2px solid #e63946', paddingBottom: '10px', marginBottom: '20px' }}>GAME HIGHLIGHTS</h2>
+        <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+          <iframe 
+            src="https://www.youtube.com/embed/4nqJgmcwR-g" 
+            title="Mahamadou Kanoute Highlights"
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: '10px' }}
+            frameBorder="0" 
+            allowFullScreen
+          ></iframe>
+        </div>
+      </section>
+
+      {/* SECTION CV : Le lien vers ton Google Doc */}
+      <section style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center', backgroundColor: '#1a1a1a', padding: '40px', borderRadius: '15px' }}>
+        <h2 style={{ color: '#e63946', marginBottom: '10px' }}>ACADEMIC & ATHLETIC CV</h2>
+        <p style={{ color: '#ccc', marginBottom: '25px' }}>
+          Licence AES - Université de Caen <br/> 
+          Full stats, Academic background & Contact info
+        </p>
         
-        <a href="https://youtu.be/EBG3r-NNx20?feature=shared" class="button btn-youtube">🎥 WATCH MY HIGHLIGHTS</a>
-        
-        <a href="https://www.instagram.com/mamsreal2/" class="button btn-insta">📸 INSTAGRAM PROFILE</a>
-        
-        <a href="https://wa.me/33636010926" class="button btn-whatsapp">💬 WHATSAPP ME</a>
+        {/* Bouton de téléchargement / Consultation */}
+        <a 
+          href="https://docs.google.com/document/d/1KIJStpcoVmoYNNLrT5KSehT6z7TPcwTcluGHbUWDAhw/edit?usp=sharing" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          style={{ 
+            backgroundColor: '#e63946', 
+            color: '#fff', 
+            padding: '15px 35px', 
+            borderRadius: '8px', 
+            textDecoration: 'none', 
+            fontWeight: 'bold', 
+            fontSize: '1.2rem',
+            display: 'inline-block',
+            transition: '0.3s'
+          }}
+        >
+          VIEW FULL RESUME
+        </a>
+      </section>
+
+      {/* FOOTER : Contact rapide */}
+      <footer style={{ textAlign: 'center', marginTop: '60px', color: '#666', fontSize: '0.9rem' }}>
+        <p>© 2026 Mahamadou Kanoute - Recruitment Portfolio</p>
+      </footer>
+
     </div>
-</body>
-</html>
+  );
+};
+
+export default Portfolio;
